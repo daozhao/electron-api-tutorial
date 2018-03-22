@@ -11,7 +11,7 @@ click.onclick = () => {
         height: 200,
         frame: true,
         // frame: false
-        transparent: true
+        //transparent: true
     })
 
     win.on('close',()=>{win = null});
