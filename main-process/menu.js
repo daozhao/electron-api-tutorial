@@ -1,3 +1,4 @@
+const { ipcMain, BrowserWindow } = require('electron');
 const { Menu, app } =  require('electron');
 
 
@@ -28,10 +29,15 @@ let template = [
             }
         ]
     }
-]
+];
 
 let menu = Menu.buildFromTemplate(template);
 
 Menu.setApplicationMenu(menu);
 
 app.dock.setMenu(menu);
+
+ipcMain.on('show-context-menu',(e)=>{
+    const win = BrowserWindow.fromWebContents(e.sender);
+    menu.popup(win);
+});
