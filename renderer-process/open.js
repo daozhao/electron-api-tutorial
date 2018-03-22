@@ -9,8 +9,9 @@ click.onclick = () => {
     win = new BrowerWindow({
         width: 300,
         height: 200,
-        frame: true
+        frame: true,
         // frame: false
+        transparent: true
     })
 
     win.on('close',()=>{win = null});
