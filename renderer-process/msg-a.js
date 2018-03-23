@@ -8,4 +8,8 @@ btn.onclick = () => {
 
    console.log(msg);
 
+   ipcRenderer.send('msg-a-1',{name:'alice'});
+   ipcRenderer.on('msg-a-1-back',function(event,arg){
+       console.log(arg.name);
+   });
 }
