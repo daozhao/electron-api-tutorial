@@ -28,7 +28,7 @@ const createWindow = () => {
     require('./main-process/msg-a.js');
     require('./main-process/tray.js');
     // require('./main-process/dialog.js');
-    pdf(win);
+    // pdf(win);
 }
 
 require('./main-process/shortcut.js');
