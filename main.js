@@ -30,6 +30,8 @@ const createWindow = () => {
     // require('./main-process/dialog.js');
 }
 
+require('./main-process/shortcut.js');
+
 app.on('ready',createWindow);
 
 app.on('window-all-close',()=>{
