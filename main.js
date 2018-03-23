@@ -27,6 +27,7 @@ const createWindow = () => {
     require('./main-process/menu.js');
     require('./main-process/msg-a.js');
     require('./main-process/tray.js');
+    require('./main-process/dialog.js');
 }
 
 app.on('ready',createWindow);
