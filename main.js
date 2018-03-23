@@ -1,7 +1,7 @@
 const {app,BrowserWindow} = require('electron');
+const pdf = require('./main-process/pdf.js').pdf;
 
 const path = require('path');
-
 const url = require('url');
 
 let win;
@@ -28,6 +28,7 @@ const createWindow = () => {
     require('./main-process/msg-a.js');
     require('./main-process/tray.js');
     // require('./main-process/dialog.js');
+    pdf(win);
 }
 
 require('./main-process/shortcut.js');
